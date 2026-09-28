@@ -1,0 +1,86 @@
+{
+ "measured": {
+  "record": "results/e16/e16-micro-2.json",
+  "swap_overheads_s": [
+   103.74093883298337
+  ],
+  "swap_median_s": 103.74093883298337,
+  "summary": {
+   "shared_cost_usd": 0.8926756959863373,
+   "dedicated_cost_usd_modelled": 0.6871223016224609,
+   "saving_pct": -29.915110290921355,
+   "gpu_runtime_s_shared": 997.2051892901405,
+   "gpu_runtime_s_dedicated": 972.1081063759048,
+   "moves": 4,
+   "all_checks_ok": true,
+   "error": "RuntimeError: phase 2 of A did not return"
+  },
+  "window": {
+   "window_s": 590.9686805838719,
+   "rounds": 2,
+   "gpu_held_s": 539.5978604999244,
+   "cpu_held_s": 642.3395006678194,
+   "gpu_train_s": 487.2271903338842,
+   "shared_usd": 0.47647415888697586,
+   "dedicated_usd": 0.6871223016224609,
+   "saving_pct": 30.656571943319864,
+   "gpu_busy_pct_shared": 90.29450003424401,
+   "gpu_busy_pct_dedicated": 50.120679699946685,
+   "gpu_runtimes_ever_overlap": false,
+   "moves": 4,
+   "moves_state_equal": 4,
+   "move_patch_s": [
+    25.207485833903775,
+    25.33208724996075,
+    17.95723320893012,
+    44.0087329170201
+   ]
+  }
+ },
+ "day": {
+  "gpu": "gpu_a100_40",
+  "phase_s": 1800,
+  "hours": 8,
+  "swap_s": 103.74093883298337,
+  "swaps": 15,
+  "shared_usd": 25.949539612642262,
+  "dedicated_usd": 40.7138304,
+  "saving_pct": 36.26357589620882,
+  "gpu_hours_shared": 8.432253911804098,
+  "gpu_hours_dedicated": 16.0,
+  "gpu_busy_pct_shared": 94.87380341809921,
+  "gpu_busy_pct_dedicated": 50.0,
+  "finish_delay_pct": 5.403173897551228
+ },
+ "day_t4": {
+  "gpu": "gpu_t4",
+  "phase_s": 1800,
+  "hours": 8,
+  "swap_s": 103.74093883298337,
+  "swaps": 15,
+  "shared_usd": 11.342285448995856,
+  "dedicated_usd": 12.996915199999998,
+  "saving_pct": 12.73094211620418,
+  "gpu_hours_shared": 8.432253911804098,
+  "gpu_hours_dedicated": 16.0,
+  "gpu_busy_pct_shared": 94.87380341809921,
+  "gpu_busy_pct_dedicated": 50.0,
+  "finish_delay_pct": 5.403173897551228
+ },
+ "day_2x_swap": {
+  "gpu": "gpu_a100_40",
+  "phase_s": 1800,
+  "hours": 8,
+  "swap_s": 207.48187766596675,
+  "swaps": 15,
+  "shared_usd": 27.27976402528452,
+  "dedicated_usd": 40.7138304,
+  "saving_pct": 32.996321502374485,
+  "gpu_hours_shared": 8.864507823608195,
+  "gpu_hours_dedicated": 16.0,
+  "gpu_busy_pct_shared": 90.24753724842101,
+  "gpu_busy_pct_dedicated": 50.0,
+  "finish_delay_pct": 10.806347795102432
+ },
+ "note": "model: measured swap overhead and list prices applied to a longer schedule; not a run"
+}

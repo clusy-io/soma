@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+hostenv/
+.DS_Store
+
+# Run state and derived files a harness or analyser can leave beside the records.
+results/**/journal.sqlite*
+results/**/blobs/
+results/e14/e14_summary.json

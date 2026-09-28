@@ -1,0 +1,316 @@
+{
+ "schema": "e16/1",
+ "cohort": "e16-micro-2",
+ "phase_s": 240.0,
+ "cycles": 2,
+ "gpu": "gpu_a100_40",
+ "phases": {
+  "A": [
+   {
+    "kind": "gpu",
+    "device": "cuda",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "seconds": 240.03352212905884,
+    "steps": 13238,
+    "digest": "57a7580b08b2d798",
+    "train_steps": 13238,
+    "cpu_batches": 0,
+    "phases": 1,
+    "last_loss": 5.8773883210960776e-05,
+    "start_s": 46.37353766616434,
+    "end_s": 290.54664587508887,
+    "runtime": "gpu_a100_40",
+    "round": 0
+   },
+   {
+    "kind": "cpu",
+    "seconds": 240.00418734550476,
+    "batches": 39318,
+    "digest": "57a7580b08b2d798",
+    "train_steps": 13238,
+    "cpu_batches": 39318,
+    "phases": 2,
+    "last_loss": 5.8773883210960776e-05,
+    "start_s": 394.28758470807225,
+    "end_s": 636.4180726250634,
+    "runtime": "cpu",
+    "round": 1
+   }
+  ],
+  "B": [
+   {
+    "kind": "cpu",
+    "seconds": 240.00128650665283,
+    "batches": 38410,
+    "digest": "a0d863d3f8557686",
+    "train_steps": 0,
+    "cpu_batches": 38410,
+    "phases": 1,
+    "last_loss": null,
+    "start_s": 46.37389108305797,
+    "end_s": 289.1243192080874,
+    "runtime": "cpu",
+    "round": 0
+   },
+   {
+    "kind": "gpu",
+    "device": "cuda",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "seconds": 240.03154253959656,
+    "steps": 12914,
+    "digest": "edc3e4332a504734",
+    "train_steps": 12914,
+    "cpu_batches": 38410,
+    "phases": 2,
+    "last_loss": 5.116548709338531e-05,
+    "start_s": 394.28813612507656,
+    "end_s": 637.3422182500362,
+    "runtime": "gpu_a100_40",
+    "round": 1
+   }
+  ]
+ },
+ "moves": [
+  {
+   "to": "cpu",
+   "status": 200,
+   "patch_start_s": 297.9741416662,
+   "patch_return_s": 323.1816275001038,
+   "split_rule": "destroy_returned: PATCH start + cumulative timeline ms",
+   "destroy_cumulative_ms": 22968.4,
+   "split_capped_at_patch_return": false,
+   "split_s": 320.9425416662,
+   "timeline_sum_ms": 24253.6,
+   "timeline_total_ms": 24253.7,
+   "workload": "A",
+   "round": 0,
+   "frm": "gpu_a100_40",
+   "attempt": 1
+  },
+  {
+   "to": "gpu_a100_40",
+   "status": 200,
+   "patch_start_s": 348.6035617501475,
+   "patch_return_s": 373.93564900010824,
+   "split_rule": "destroy_returned: PATCH start + cumulative timeline ms",
+   "destroy_cumulative_ms": 23709.800000000003,
+   "split_capped_at_patch_return": false,
+   "split_s": 372.31336175014746,
+   "timeline_sum_ms": 24247.7,
+   "timeline_total_ms": 24247.8,
+   "workload": "B",
+   "round": 0,
+   "frm": "cpu",
+   "attempt": 1
+  },
+  {
+   "to": "cpu",
+   "status": 200,
+   "patch_start_s": 643.9140372911934,
+   "patch_return_s": 661.8712705001235,
+   "split_rule": "destroy_returned: PATCH start + cumulative timeline ms",
+   "destroy_cumulative_ms": 16202.599999999999,
+   "split_capped_at_patch_return": false,
+   "split_s": 660.1166372911933,
+   "timeline_sum_ms": 16951.0,
+   "timeline_total_ms": 16951,
+   "workload": "B",
+   "round": 1,
+   "frm": "gpu_a100_40",
+   "attempt": 1
+  },
+  {
+   "to": "gpu_a100_40",
+   "status": 200,
+   "patch_start_s": 688.6853062079754,
+   "patch_return_s": 732.6940391249955,
+   "split_rule": "destroy_returned: PATCH start + cumulative timeline ms",
+   "destroy_cumulative_ms": 42269.49999999999,
+   "split_capped_at_patch_return": false,
+   "split_s": 730.9548062079754,
+   "timeline_sum_ms": 42824.29999999999,
+   "timeline_total_ms": 42824.2,
+   "workload": "A",
+   "round": 1,
+   "frm": "cpu",
+   "attempt": 1
+  }
+ ],
+ "checks": [
+  {
+   "workload": "A",
+   "round": 0,
+   "ok": true,
+   "before": {
+    "digest": "57a7580b08b2d798",
+    "train_steps": 13238,
+    "cpu_batches": 0,
+    "phases": 1,
+    "last_loss": 5.8773883210960776e-05
+   },
+   "after": {
+    "digest": "57a7580b08b2d798",
+    "train_steps": 13238,
+    "cpu_batches": 0,
+    "phases": 1,
+    "last_loss": 5.8773883210960776e-05
+   }
+  },
+  {
+   "workload": "B",
+   "round": 0,
+   "ok": true,
+   "before": {
+    "digest": "a0d863d3f8557686",
+    "train_steps": 0,
+    "cpu_batches": 38410,
+    "phases": 1,
+    "last_loss": null
+   },
+   "after": {
+    "digest": "a0d863d3f8557686",
+    "train_steps": 0,
+    "cpu_batches": 38410,
+    "phases": 1,
+    "last_loss": null
+   }
+  },
+  {
+   "workload": "B",
+   "round": 1,
+   "ok": true,
+   "before": {
+    "digest": "edc3e4332a504734",
+    "train_steps": 12914,
+    "cpu_batches": 38410,
+    "phases": 2,
+    "last_loss": 5.116548709338531e-05
+   },
+   "after": {
+    "digest": "edc3e4332a504734",
+    "train_steps": 12914,
+    "cpu_batches": 38410,
+    "phases": 2,
+    "last_loss": 5.116548709338531e-05
+   }
+  },
+  {
+   "workload": "A",
+   "round": 1,
+   "ok": true,
+   "before": {
+    "digest": "57a7580b08b2d798",
+    "train_steps": 13238,
+    "cpu_batches": 39318,
+    "phases": 2,
+    "last_loss": 5.8773883210960776e-05
+   },
+   "after": {
+    "digest": "57a7580b08b2d798",
+    "train_steps": 13238,
+    "cpu_batches": 39318,
+    "phases": 2,
+    "last_loss": 5.8773883210960776e-05
+   }
+  }
+ ],
+ "error": "RuntimeError: phase 2 of A did not return",
+ "runtimes": {
+  "A": {
+   "runtime_s": {
+    "gpu_a100_40": 709.4019137490947,
+    "cpu": 410.0122645417754
+   },
+   "runtimes": [
+    {
+     "pid": "262424df-9dac-4490-aacd-ed70e43e462a",
+     "name": "clusy-exp-e14-e16A-493a138383c8",
+     "sku": "gpu_a100_40",
+     "start_s": 3.1750183552503586e-05,
+     "start_event": "before create_project",
+     "create_returned_s": 1.1508278751280159,
+     "end_s": 320.9425416662,
+     "end_event": "source destroy_returned",
+     "seconds": 320.94250991601643
+    },
+    {
+     "pid": "262424df-9dac-4490-aacd-ed70e43e462a",
+     "sku": "cpu",
+     "start_s": 320.9425416662,
+     "start_event": "destination from source destroy_returned",
+     "end_s": 730.9548062079754,
+     "end_event": "source destroy_returned",
+     "seconds": 410.0122645417754
+    },
+    {
+     "pid": "262424df-9dac-4490-aacd-ed70e43e462a",
+     "sku": "gpu_a100_40",
+     "start_s": 730.9548062079754,
+     "start_event": "destination from source destroy_returned",
+     "end_s": 1119.4142100410536,
+     "end_event": "after delete_project returned (end of run)",
+     "delete_status": 401,
+     "seconds": 388.4594038330782
+    }
+   ],
+   "est_runtime_cost_usd": {
+    "server_list_price": 0.5621135721281562,
+    "campaign1_ledger": 0.42506165912289184
+   },
+   "create_failures": []
+  },
+  "B": {
+   "runtime_s": {
+    "cpu": 859.0001625010118,
+    "gpu_a100_40": 287.8032755410459
+   },
+   "runtimes": [
+    {
+     "pid": "34486393-03af-46ad-b73b-dc3e97408ae9",
+     "name": "clusy-exp-e14-e16B-796b95dd4732",
+     "sku": "cpu",
+     "start_s": 21.61520554102026,
+     "start_event": "before create_project",
+     "create_returned_s": 23.94155070814304,
+     "end_s": 372.31336175014746,
+     "end_event": "source destroy_returned",
+     "seconds": 350.6981562091272
+    },
+    {
+     "pid": "34486393-03af-46ad-b73b-dc3e97408ae9",
+     "sku": "gpu_a100_40",
+     "start_s": 372.31336175014746,
+     "start_event": "destination from source destroy_returned",
+     "end_s": 660.1166372911933,
+     "end_event": "source destroy_returned",
+     "seconds": 287.8032755410459
+    },
+    {
+     "pid": "34486393-03af-46ad-b73b-dc3e97408ae9",
+     "sku": "cpu",
+     "start_s": 660.1166372911933,
+     "start_event": "destination from source destroy_returned",
+     "end_s": 1168.418643583078,
+     "end_event": "after delete_project returned (end of run)",
+     "delete_status": 401,
+     "seconds": 508.3020062918846
+    }
+   ],
+   "est_runtime_cost_usd": {
+    "server_list_price": 0.3305621238581812,
+    "campaign1_ledger": 0.19184131419045808
+   },
+   "create_failures": []
+  }
+ },
+ "summary": {
+  "shared_cost_usd": 0.8926756959863373,
+  "dedicated_cost_usd_modelled": 0.6871223016224609,
+  "saving_pct": -29.915110290921355,
+  "gpu_runtime_s_shared": 997.2051892901405,
+  "gpu_runtime_s_dedicated": 972.1081063759048,
+  "moves": 4,
+  "all_checks_ok": true,
+  "error": "RuntimeError: phase 2 of A did not return"
+ }
+}
