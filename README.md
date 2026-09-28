@@ -52,14 +52,3 @@ python figures/build_figures.py && python figures/share_model.py
 
 - **Offline, on one machine:** the tests, the E11 to E16 dry runs, the two Docker experiments, and the re-analysis of the shipped records, which recomputes every reported number except the production statistics (not shipped).
 - **Cloud:** rerunning E11 to E16 and the escalation runs needs CPU and GPU runtimes behind an API that implements the [runtime contract](docs/EXPERIMENTS.md#cloud-runs), which is not part of this repository. Reruns write outside `results/` ([how](docs/EXPERIMENTS.md#rerunning-without-touching-the-records)).
-
-## Citation
-
-```bibtex
-@misc{hasanov2026soma,
-  title  = {Moving Live Python Sessions across Heterogeneous Runtimes},
-  author = {Eldar Hasanov and Ju Lin and {Mohamed Fouzil Ali Syed Ali}},
-  year   = {2026},
-  note   = {Under review}
-}
-```
