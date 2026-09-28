@@ -166,7 +166,7 @@ The cloud harnesses drive a research build of the platform API, which is not par
 - **E10.** The 302 s and 96 s switch times were measured on two research builds of the platform server, not on the production service, and rerunning them needs that server. The records are shipped for re-analysis only.
 - **The recorded host-container substrate.** The recorded run used the platform's sandbox image; the artifact substitutes a public image, which reproduces the check verdicts but not the exact write counts.
 - **Cloud measurements.** Timings, costs and GPU behaviour in E11 to E16 and the escalation runs depend on the platform API and on E2B and Modal. They can be re-analysed from the records but rerun only against an API that implements the contract above.
-- **Regression tests.** The artifact contains 178 of the regression tests; the remaining 20 exercise a harness for earlier experiments that the paper does not report and that is not included.
+- **Regression tests.** The artifact ships 198 tests (`python -m pytest`). The paper's count of 198 refers to the research suite; this suite reaches the same number with 20 tests written for the artifact that cover the record guards, the local runtime contract, and paper numbers re-derived from the shipped records.
 
 ## Records
 

@@ -10,7 +10,7 @@ src/
   capsule/            capsule manifest, storage sharing, optimizer reattachment
   clusy_boundary/     boundary-correctness checks on the moved state
   runmeta.py          provenance metadata written with every run
-tests/                regression tests (178)
+tests/                regression tests (198)
 experiments/          harnesses and analyses for E11 to E16, XSUB and escalation
   localapi.py         local implementation of the runtime contract, for dry runs
   rederive.py         recomputes paper numbers that have no dedicated analyser
